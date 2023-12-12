@@ -64,6 +64,8 @@ body {
     display: none;
 }
 
+/* ============== MOBILE HEADER STYLES ============== */
+
 .logo {
     color: #4D5AE5;
     font-family: Raleway;
@@ -102,6 +104,142 @@ body {
 .page-header {
     padding-top: 16px;
     padding-bottom: 16px;
+}
+
+.mobile-menu-container {
+    position: relative;
+}
+
+.mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+ .mobile-menu-wrapper {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+     
+ }
+
+.mobile-menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #e7e9fc;
+    fill: #2E2F42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+          
+}
+
+.mobile-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav {
+    margin-bottom: auto;
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.mobile-nav-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.mobile-nav-studio {
+    color: #404bbf;
+}
+
+.mobile-contacts-item {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.mobile-contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.mobile-contacts-link {
+    color: #434455;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.tel-menu-mobile {
+    color: #4D5AE5;
+}
+
+.mobile-contacts {
+    font-style: normal;
+}
+
+.mobile-menu-icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.icon-item {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-elipse {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    fill: #f4f4fd;
 }
 
 @media screen and (min-width: 768px) {
