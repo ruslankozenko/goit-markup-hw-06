@@ -1,7 +1,7 @@
-a {
+a { 
     text-decoration: none;
 }
-
+   
 ul {
     list-style: none;
     margin-top: 0;
@@ -70,7 +70,7 @@ body {
         padding-top: 24px;
         padding-bottom: 24px;
 }
-
+.
 .logo-studio {
     color: #2E2F42;
 }
@@ -136,6 +136,8 @@ body {
 .address-link:focus {
     color: #404bbf;
 }
+
+ <!--section1-->
 
 .section-one {
     background-color: #2e2f42;
