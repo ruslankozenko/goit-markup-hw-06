@@ -121,6 +121,7 @@ body {
 }
 
 .mobile-menu-wrapper {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -161,6 +162,8 @@ body {
 }
 
 .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding-top: 72px;
     padding-bottom: 40px;
@@ -285,9 +288,10 @@ body {
     }
     
     .menu-link {
-        display: inline-flex;
+        display: flex;
         align-items: flex-start;
         gap: 40px;
+        margin-right: auto;
     }
     
     .logo {
@@ -351,7 +355,6 @@ body {
     .menu-contact {
         display: flex;
         flex-direction: column;
-        padding: 16px 0 16px;
         gap: 12px;
     }
     
