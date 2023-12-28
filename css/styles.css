@@ -316,7 +316,36 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 /* ============== /mobil section 1 ============== */
 
 /* ============== mobil section 2 ============== */
+.icon {
+    display: none;
+}
 
+.menu-two {
+    display: flex;
+    gap: 72px;
+    flex-direction: column;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.section-title {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    width: 264px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    text-align: center;
+    font-style: normal;
+}
+
+.text-title {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 
 
 
@@ -449,6 +478,8 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         padding-right: 15px;
         margin: auto;
     }
+
+
 }
 
 
