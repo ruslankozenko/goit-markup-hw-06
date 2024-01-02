@@ -608,14 +608,11 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 }
 
 .form-label-footer {
-   
-        
     padding-top: 16px;
     padding-bottom: 16px;
     border-radius: 4px;
     opacity: 0.3;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-   
 }
 
 .form-input-footer {
@@ -633,12 +630,8 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     border-radius: 4px;
 }
 
-
-
-
-
 .form-button-footer {
-    display: flex;
+    display: inline-flex;
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
@@ -646,13 +639,12 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     border-radius: 4px;
     background: #4D5AE5;
     color: #FFF;
-       
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.5;
-       
-        letter-spacing: 0.04em;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: 1px solid #4D5AE5;
 }
 
 
