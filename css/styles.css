@@ -936,13 +936,13 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         background: #FFF;
     }
 
-        .page-header {
-            border-bottom: 1px solid #E7E9FC;
-            background: #FFF;
-            box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    .page-header {
+        border-bottom: 1px solid #E7E9FC;
+        background: #FFF;
+        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
                 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
                 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-        }
+    }
     
     .page-navigation {
         display: flex;
@@ -1049,9 +1049,9 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         height: 436px;
     }
 
-        @media screen and (min-resolution: 192dpi) and (max-width: 767px),
-        screen and (min-resolution: 2dppx) and (max-width: 767px),
-        screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+        @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+        screen and (min-resolution: 2dppx) and (min-width: 768px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
             .section-one {
                 background-image: linear-gradient(to bottom,
                         rgba(46, 47, 66, 0.7),
@@ -1093,8 +1093,53 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
      /* ============== /section 1 tab ============== */
 
-    
+     /* ============== section 2 tab ============== */
 
+    .section-two {
+       padding-top: 96px;
+       padding-bottom: 96px;
+    }
+
+    .menu-two {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+       
+    }
+    
+    .section-title {
+        color: #2e2f42;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        font-style: normal;
+        text-transform: capitalize;
+        width: 264px;
+        margin-bottom: 8px;
+    }
+    
+        
+    .text-title {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        font-style: normal;
+        font-weight: 500;
+    }
+    
+    .paragraph {
+        width: 356px;
+    }
+
+     /* ============== /section 2 tab ============== */
+
+}
+
+@media screen and (max-width: 1167px) { 
+    .icon {
+        display: none;
+    }
 }
 
 
@@ -1134,6 +1179,8 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
             color: #404bbf;
         }
 
+    /* ============== /header desk ============== */
+
     /* ============== section 1 desk ============== */
 
     .section-one {
@@ -1146,7 +1193,55 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         height: 600px;
         }
 
-   
+        @media screen and (min-resolution: 192dpi) and (min-width: 1168px),
+        screen and (min-resolution: 2dppx) and (min-width: 1168px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 1168px) {
+            .section-one {
+                background-image: linear-gradient(to bottom,
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/hover/people-office-desk@2x.jpg);
+            }
+        }
+    
+    /* ============== /section 1 desk ============== */
+
+    /* ============== section 2 desk ============== */
+    
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background: #F4F4FD;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        border: 1px solid #8E8F99;
+    }
+    
+    .section-title {
+             color: #2e2f42;
+             font-size: 36px;
+             font-weight: 700;
+             line-height: 1.11;
+             letter-spacing: 0.02em;
+             font-style: normal;
+             text-transform: capitalize;
+             width: 264px;
+             margin-bottom: 8px;
+         }
+    
+    .text-title {
+             font-size: 16px;
+             line-height: 1.5;
+             letter-spacing: 0.02em;
+             font-style: normal;
+             font-weight: 500;
+         }
+    
+    .paragraph {
+             width: 264px;
+         }
 
 }
 
