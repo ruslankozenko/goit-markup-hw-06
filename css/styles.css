@@ -504,7 +504,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
 /* ============== /mobil section 4 ============== */
 
-/* ============== footer ============== */
+/* ============== footer mob ============== */
 
 .footer {
     background-color: #2e2f42;
@@ -644,7 +644,7 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     border: 1px solid #4D5AE5;
 }
 
-/* ============== /footer ============== */
+/* ============== /footer mob ============== */
 
 /* ============== modal mob ============== */
 
@@ -1304,9 +1304,150 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
         }
 
     /* ============== /section 4 Our portfolio tab ==============*/
+
+    /* ============== footer tab ==============*/
+
+   
          
+    .footer {
+        background-color: #2e2f42;
+        padding: 96px 0;
+    }
 
+    .logo-footer {
+        font-family: "Raleway", sans-serif;
+        color: #4d5ae5;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+    
+    .web-footer {
+        color: #f4f4fd;
+        font-size: 18px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
+    }
 
+    .text-footer {
+        color: #f4f4fd;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        max-width: 264px;
+    }
+        
+    .social-media-text {
+        color: #FFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5em;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+    }
+
+    .social-links-footer {
+        display: flex;
+        gap: 16px;
+    }
+    
+    .social-links-item-footer {
+        width: 40px;
+        height: 40px;
+    }
+
+        .social-links-link-footer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4D5AE5;
+            border-radius: 50%;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .social-links-link-footer:hover,
+        .social-links-link-footer:focus {
+            background-color: #31D0AA;
+        }
+    
+        .footer-heading {
+            margin-right: auto;
+        }
+
+        
+    
+        .subscribe-text {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+        }
+    
+        .form-footer {
+            display: flex;
+            gap: 24px;
+        }
+    
+        .form-label-footer {
+            gap: 24px;
+        }
+    
+        .form-input-footer {
+            border: 1px solid #FFF;
+            width: 264px;
+            height: 40px;
+            background-color: transparent;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            font-size: 12px;
+            color: #FFF;
+            padding-left: 16px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+        }
+    
+        .form-input-footer::placeholder {
+            color: #fff;
+        }
+    
+    
+        .form-button-footer {
+            min-width: 165px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #FFF;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background: #4D5AE5;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .form-button-footer:hover,
+        .form-button-footer:focus {
+            background-color: #404BBF
+        }
+    
+        .icon-button-subscribe {
+            margin-left: 16px;
+        }
 
 }
 
@@ -1318,9 +1459,20 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
 
 @media screen and (min-width: 768px) and (max-width: 1167px) {
     .menu-three {
-            padding-left: 108px;
-            padding-right: 108px;
-        }
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+    .subscribe-area {
+        padding-top: 72px;
+    }
+
+    .container-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding-left: 108px;
+    }
+    
 }
  
 @media screen and (min-width: 1168px) {
@@ -1474,6 +1626,23 @@ screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
     }
 
     /* ============== /section 4 Our portfolio desk ==============*/
+
+    /* ============== footet desk ==============*/
+
+    .container-footer {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .footer {
+        padding: 100px 0;
+    }
+
+    .text-logo-footer {
+        margin-right: 120px;
+    }
+
+    /* ============== /footet desk ==============*/
 
 }
 
