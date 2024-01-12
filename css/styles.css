@@ -57,9 +57,6 @@ body {
 
 @media screen and (max-width: 767px) {
 
-
-    /* ============== MOBILE HEADER ============== */
-
     .menu-link {
         display: none;
     }
@@ -67,6 +64,157 @@ body {
     .menu-contact {
         display: none;
     }
+
+    /* ============== MOBILE MENU ============== */
+    
+    .mobile-menu-container {
+        position: relative;
+    }
+    
+    .mobile-menu-wrapper {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999999;
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+    
+        transform: translateX(100%);
+        transition: transform 250ms linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        }
+    
+    .mobile-menu-wrapper.is-open {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    
+    }
+    
+    .mobile-menu-close-btn {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid #e7e9fc;
+        fill: #2E2F42;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .mobile-menu-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-top: 72px;
+        padding-bottom: 40px;
+        min-height: 640px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mobile-nav {
+        margin-bottom: auto;
+    }
+    
+    .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    
+    .mobile-nav-link {
+        color: #2E2F42;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    
+    .mobile-nav-studio {
+        color: #404bbf;
+    }
+    
+    .mobile-contacts-item {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+    }
+    
+    .mobile-contacts-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+    
+    .mobile-contacts-link {
+        color: #434455;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+    
+    .tel-menu-mobile {
+        color: #4D5AE5;
+    }
+    
+    .mobile-contacts {
+        font-style: normal;
+    }
+    
+    .mobile-menu-icon-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .icon-item {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon-elipse {
+        width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .icon {
+        fill: #f4f4fd;
+    }
+    
+    /* ============== /MOBILE MENU ============== */
+
+    .page-header {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    }
+
+    /* ============== HEADER ============== */
 
     .logo {
         color: #4D5AE5;
@@ -103,154 +251,142 @@ body {
         justify-content: space-between;
     }
 
-    .page-header {
-        padding-top: 16px;
-        padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+
+        .container {
+            max-width: 768px;
+        }
+
+        .mobile-menu-wrapper {
+            display: none;
+        }
+        
+        .menu-burger-btn {
+            display: none;
+            }
+
+        .page-header {
+            border-bottom: 1px solid #E7E9FC;
+            background: #FFF;
+            box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+                        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+                        0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+        }
+
+        .page-navigation {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+        
+        .menu-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-right: auto;
+        }
+
+        .logo {
+            margin-right: 76px;
+           
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        .link {
+            color: #2e2f42;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            display: block;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+    
+        .current {
+            position: relative;
+            color: #404BBF;
+        }
+    
+        .menu-link .current::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: #404BBF;
+        }
+    
+        .address {
+            display: flex;
+            font-style: normal;
+        }
+    
+        .menu-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    
+        .contact {
+            color: #434455;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            display: block;
+    
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
     }
 
-    .mobile-menu-container {
-        position: relative;
-    }
+ @media screen and (min-width: 1158px) {
 
-    .mobile-menu-wrapper {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .logo-studio {
+        color: #2E2F42;
+    }
+    
+    .link:hover,
+    .link:focus {
+        color: #404bbf;
+    }
+    
+    .menu-contact {
         display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 99999999;
-        width: 100%;
-        height: 100%;
-        background-color: #FFFFFF;
-
-        transform: translateX(100%);
-        transition: transform 250ms linear;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
-
-    .mobile-menu-wrapper.is-open {
-        transform: translateX(0%);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-
-    }
-
-    .mobile-menu-close-btn {
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        width: 24px;
-        height: 24px;
-        background-color: transparent;
-        border-radius: 50%;
-        border: 1px solid #e7e9fc;
-        fill: #2E2F42;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    .mobile-menu-container {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        padding-top: 72px;
-        padding-bottom: 40px;
-        min-height: 640px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mobile-nav {
-        margin-bottom: auto;
-    }
-
-    .mobile-nav-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
         gap: 40px;
     }
-
-    .mobile-nav-link {
-        color: #2E2F42;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-        text-align: center;
+    
+    .contact {
+    
+        padding-top: 24px;
+        padding-bottom: 24px;
+    
     }
-
-    .mobile-nav-studio {
+    
+    .address-link:hover,
+    .address-link:focus {
         color: #404bbf;
     }
 
-    .mobile-contacts-item {
-        display: flex;
-        gap: 24px;
-        flex-direction: column;
-    }
+    } 
 
-    .mobile-contacts-list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        margin-bottom: 48px;
-    }
+    /* ============== / HEADER ============== */
 
-    .mobile-contacts-link {
-        color: #434455;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-    }
-
-    .tel-menu-mobile {
-        color: #4D5AE5;
-    }
-
-    .mobile-contacts {
-        font-style: normal;
-    }
-
-    .mobile-menu-icon-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    .icon-item {
-        width: 40px;
-        height: 40px;
-    }
-
-    .icon-elipse {
-        width: 100%;
-        height: 100%;
-        background-color: #4d5ae5;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .icon {
-        fill: #f4f4fd;
-    }
-
-
-
-    /* ============== /MOBILE HEADER ============== */
-
-    /* ============== mobil section 1 ============== */
+    /* ============== section 1 ============== */
 
     .section-one {
         background-color: #2e2f42;
@@ -283,7 +419,6 @@ body {
     }
 
     .button-order {
-        font-family: "Roboto", sans-serif;
         color: #ffffff;
         font-size: 16px;
         font-style: normal;
@@ -312,17 +447,64 @@ body {
                 url(../images/hover/people-office-mobil@2x.jpg);
         }
     }
+    
+    @media screen and (min-width: 768px) {
 
-    /* ============== /mobil section 1 ============== */
+        .section-one {
+            padding-top: 112px;
+            max-width: 768px;
+            height: 436px;
+        }
 
-    /* ============== mobil section 2 ============== */
+        @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+        screen and (min-resolution: 2dppx) and (min-width: 768px),
+        screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+            .section-one {
+                background-image: linear-gradient(to bottom,
+                                 rgba(46, 47, 66, 0.7),
+                                 rgba(46, 47, 66, 0.7)),
+                             url(../images/hover/people-office-tablet@2x.jpg);
+                    }
+            }
+
+        .title {
+            font-size: 56px;
+            max-width: 496px;
+            margin: auto;
+            margin-bottom: 48px;
+        }
+    }
+
+    @media screen and (min-width: 1158px) {
+        .section-one {
+                padding: 188px 0;
+                background-image: linear-gradient(to bottom,
+                        rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/hover/people-office-desk.jpg);
+                max-width: 1440px;
+                height: 600px;
+            }
+        
+            @media screen and (min-resolution: 192dpi) and (min-width: 1168px),
+            screen and (min-resolution: 2dppx) and (min-width: 1168px),
+            screen and (min-device-pixel-ratio: 2) and (min-width: 1168px) {
+                .section-one {
+                    background-image: linear-gradient(to bottom,
+                            rgba(46, 47, 66, 0.7),
+                            rgba(46, 47, 66, 0.7)),
+                        url(../images/hover/people-office-desk@2x.jpg);
+                }
+            }
+    }
+    
+    /* ============== / section 1 ============== */
+
+    /* ============== section 2 ============== */ 
 
     .menu-two {
         display: flex;
         gap: 72px;
-        flex-direction: column;
-        padding-top: 96px;
-        padding-bottom: 96px;
     }
 
     .section-title {
@@ -342,11 +524,63 @@ body {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        font-style: normal;
+        font-weight: 500;
     }
 
-    /* ============== /mobil section 2 ============== */
+    @media screen and (max-width: 767px) {
+        .menu-two {
+          flex-direction: column;
+          padding-top: 96px;
+          padding-bottom: 96px;
+        }
+    }
 
-    /* ============== mobil section 3 ============== */
+    @media screen and (min-width: 768px) {
+        .section-two {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+
+        .menu-two {
+            flex-wrap: wrap;
+            gap: 72px 24px;
+        }
+
+        .paragraph {
+            width: 356px;
+        }
+    }
+
+    @media screen and (min-width: 1158px) {
+        .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 112px;
+                background: #F4F4FD;
+                border-radius: 4px;
+                margin-bottom: 8px;
+                border: 1px solid #8E8F99;
+            }
+        
+            .section-title {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.2;
+            }
+        
+            .text-title {
+                font-weight: 400;
+            }
+        
+            .paragraph {
+                width: 264px;
+            }
+    }
+    /* ============== / section 2 ============== */
+
+    /* ============== section 3 ============== */
 
     .section-three {
         background-color: #f4f4fd;
@@ -366,7 +600,6 @@ body {
 
     .menu-three {
         display: flex;
-        flex-direction: column;
         align-items: center;
         gap: 72px;
     }
@@ -432,9 +665,48 @@ body {
         fill: #F4F4FD;
     }
 
-    /* ============== /mobil section 3 ============== */
+    @media screen and (max-width: 767px) {
+        .menu-three {
+            flex-direction: column;
+        }
+    }
 
-    /* ============== mobil section 4 ============== */
+    @media screen and (min-width: 768px) {
+        .section-three {
+            background-color: #f4f4fd;
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+
+        .menu-three {
+            flex-wrap: wrap;
+            gap: 64px 24px;
+        }
+
+        .section-foto {
+            width: calc((100% - 24px) / 2);
+        }
+    }
+
+    @media screen and (min-width: 1158px) {
+        .section-three {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        
+        .menu-three {
+            flex-wrap: nowrap;
+        }
+
+        .social-links-link:hover,
+        .social-links-link:focus {
+            background-color: #404BBF;
+        }
+    }
+
+    /* ============== / section 3 ============== */
+
+    /* ============== section 4 ============== */
 
     .section-four {
         padding-top: 96px;
@@ -446,6 +718,7 @@ body {
     }
 
     .title-portfolio {
+        font-style: normal;
         text-align: center;
         color: #2e2f42;
         font-size: 36px;
@@ -502,9 +775,72 @@ body {
         font-weight: 400;
     }
 
-    /* ============== /mobil section 4 ============== */
+    @media screen and (min-width: 768px) {
+        .menu-portfolio {
+            column-gap: 24px;
+            row-gap: 72px;
+        }
 
-    /* ============== footer mob ============== */
+        .box-foto {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-list-item {
+            width: calc((100% - 24px) / 2);
+            transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-content {
+            border-bottom: 1px solid #E7E9FC;
+            border-left: 1px solid #E7E9FC;
+            border-right: 1px solid #E7E9FC;
+            margin-top: 0px;
+            padding: 32px 16px;
+        }
+    }
+
+    @media screen and (min-width: 1158px) {
+
+        .section-four {
+                padding-top: 120px;
+                padding-bottom: 120px;
+            }
+        
+            .menu-portfolio {
+                row-gap: 48px;
+            }
+        
+            .portfolio-list-item {
+                width: calc((100% - 48px) / 3);
+            }
+        
+            .interior-text {
+                color: #F4F4FD;
+                font-size: 16px;
+                line-height: 1.5em;
+                letter-spacing: 0.02em;
+                position: absolute;
+                top: 0;
+                padding: 40px 32px;
+                width: 100%;
+                height: 100%;
+                background-color: #4D5AE5;
+                transform: translateY(100%);
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+        .portfolio-list-item:hover .interior-text {
+            transform: translateY(0%);
+        }
+        
+        .portfolio-list-item:hover {
+            box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+        }
+    }
+    /* ============== / section 4 ============== */
+
+    /* ============== footer ============== */
 
     .footer {
         background-color: #2e2f42;
@@ -892,228 +1228,11 @@ body {
 
 
 
-}
+
 
 @media screen and (min-width: 768px) {
 
-    /* ============== header tab ============== */
-
-    .mobile-menu-wrapper {
-        display: none;
-    }
-
-    .menu-burger-btn {
-        display: none;
-    }
-
-    .container {
-        max-width: 768px;
-    }
-
-    .container-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #FFF;
-    }
-
-    .page-header {
-        border-bottom: 1px solid #E7E9FC;
-        background: #FFF;
-        box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-            0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-            0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-    }
-
-    .page-navigation {
-        display: flex;
-        align-items: center;
-        margin-right: auto;
-    }
-
-    .menu-link {
-        display: flex;
-        align-items: flex-start;
-        gap: 40px;
-        margin-right: auto;
-    }
-
-    .logo {
-        color: #4D5AE5;
-        font-family: "Raleway", sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        margin-right: 76px;
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-
-    .logo-studio {
-        color: #2E2F42;
-    }
-
-    .link {
-        color: #2e2f42;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-
-    .current {
-        position: relative;
-        color: #404BBF;
-    }
-
-    .menu-link .current::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -1px;
-        display: block;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: #404BBF;
-    }
-
-    .address {
-        display: flex;
-        font-style: normal;
-    }
-
-    .menu-contact {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .contact {
-        color: #434455;
-        font-size: 16px;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        display: block;
-
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ==============/header tab ============== */
-
-    /* ============== section 1 tab ============== */
-
-    .section-one {
-        background-color: #2e2f42;
-        padding-top: 112px;
-        display: block;
-        margin: auto;
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/hover/people-office-tablet.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        max-width: 768px;
-        height: 436px;
-    }
-
-    @media screen and (min-resolution: 192dpi) and (min-width: 768px),
-    screen and (min-resolution: 2dppx) and (min-width: 768px),
-    screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-        .section-one {
-            background-image: linear-gradient(to bottom,
-                    rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/hover/people-office-tablet@2x.jpg);
-        }
-    }
-
-    .title {
-        text-align: center;
-        color: #fff;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        letter-spacing: 0.02em;
-        max-width: 496px;
-        margin: auto;
-        margin-bottom: 48px;
-    }
-
-    .button-order {
-        color: #ffffff;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        cursor: pointer;
-        border-radius: 4px;
-        background-color: #4d5ae5;
-        display: block;
-        margin: auto;
-        min-width: 169px;
-        height: 56px;
-        border: none;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ============== /section 1 tab ============== */
-
-    /* ============== section 2 tab ============== */
-
-    .section-two {
-        padding-top: 96px;
-        padding-bottom: 96px;
-    }
-
-
-    .menu-two {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 72px 24px;
-    }
-
-    .section-title {
-        color: #2e2f42;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        font-style: normal;
-        text-transform: capitalize;
-        width: 264px;
-        margin-bottom: 8px;
-    }
-
-
-    .text-title {
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        font-style: normal;
-        font-weight: 500;
-    }
-
-    .paragraph {
-        width: 356px;
-    }
-
-    /* ============== /section 2 tab ============== */
+    
 
     /* ==============  3 Our Team tab ==============*/
 
@@ -1469,64 +1588,13 @@ body {
 }
 
 @media screen and (min-width: 1168px) {
-    .container {
-        max-width: 1168px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: auto;
-    }
 
-    .logo-studio {
-        color: #2E2F42;
-    }
-
-    .link:hover,
-    .link:focus {
-        color: #404bbf;
-    }
-
-    .menu-contact {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-    }
-
-    .contact {
-
-        padding-top: 24px;
-        padding-bottom: 24px;
-
-    }
-
-    .address-link:hover,
-    .address-link:focus {
-        color: #404bbf;
-    }
 
     /* ============== /header desk ============== */
 
     /* ============== section 1 desk ============== */
 
-    .section-one {
-        padding: 188px 0;
-        background-image: linear-gradient(to bottom,
-                rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/hover/people-office-desk.jpg);
-        max-width: 1440px;
-        height: 600px;
-    }
-
-    @media screen and (min-resolution: 192dpi) and (min-width: 1168px),
-    screen and (min-resolution: 2dppx) and (min-width: 1168px),
-    screen and (min-device-pixel-ratio: 2) and (min-width: 1168px) {
-        .section-one {
-            background-image: linear-gradient(to bottom,
-                    rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/hover/people-office-desk@2x.jpg);
-        }
-    }
+    
 
     /* ============== /section 1 desk ============== */
 
@@ -1534,30 +1602,7 @@ body {
 
 
 
-    .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 112px;
-        background: #F4F4FD;
-        border-radius: 4px;
-        margin-bottom: 8px;
-        border: 1px solid #8E8F99;
-    }
-
-    .section-title {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.2;
-    }
-
-    .text-title {
-        font-weight: 400;
-    }
-
-    .paragraph {
-        width: 264px;
-    }
+    
 
     /* ============== /section 2 desk ============== */
 
