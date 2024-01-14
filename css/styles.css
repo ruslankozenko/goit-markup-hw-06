@@ -1316,6 +1316,21 @@ body {
             margin-right: auto;
         }
 
+@media screen and (min-width: 768px) {
+    .modal-window {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 25px 24px 23px;
+         
+    }
+}
+
+@media screen and (min-width: 1168px) {
+    .modal-window {
+        padding: 72px 24px 24px 24px;
+    }
+}
+
 /* ============== / modal ============== */
 
 
@@ -1338,11 +1353,6 @@ body {
         gap: 24px;
         padding-left: 108px;
     }
-
-}
-
-@media screen and (min-width: 1168px) {
-
 
 }
 
