@@ -1005,6 +1005,7 @@ body {
         }
 
     .footer-heading {
+        display: block;
         margin-right: auto;
         }
 
