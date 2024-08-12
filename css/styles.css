@@ -12,6 +12,9 @@ ul {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
     margin-top: 0;
     margin-bottom: 0;
@@ -145,7 +148,8 @@ body {
         text-align: center;
     }
     
-    .mobile-nav-studio {
+    .mobile-nav-link:hover,
+    .mobile-nav-link:focus {
         color: #404bbf;
     }
     
@@ -171,7 +175,8 @@ body {
         letter-spacing: 0.02em;
     }
     
-    .tel-menu-mobile {
+    .mobile-contacts-link:hover,
+    .mobile-contacts-link:focus {
         color: #4D5AE5;
     }
     
@@ -791,6 +796,7 @@ body {
         }
 
         .portfolio-list-item {
+            padding-bottom: 0;
             width: calc((100% - 24px) / 2);
             transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -820,6 +826,7 @@ body {
             }
         
             .interior-text {
+                display: inline-flex;
                 color: #F4F4FD;
                 font-size: 16px;
                 line-height: 1.5em;
@@ -1336,9 +1343,7 @@ body {
 
 
 @media screen and (max-width: 1167px) {
-    .icon {
-        display: none;
-    }
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1167px) {
