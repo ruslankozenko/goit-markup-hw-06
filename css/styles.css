@@ -223,7 +223,7 @@ body {
 
     .logo {
         color: #4D5AE5;
-        font-family: Raleway;
+        font-family: "Raleway", sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -341,11 +341,11 @@ body {
     
         .contact {
             color: #434455;
-            font-size: 16px;
+            font-size: 12px;
             font-weight: 400;
             font-style: normal;
-            line-height: 1.5;
-            letter-spacing: 0.02em;
+            line-height: 1.16;
+            letter-spacing: 0.04em;
             display: block;
     
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -360,10 +360,6 @@ body {
         padding-right: 15px;
     }
     
-    .logo-studio {
-        color: #2E2F42;
-    }
-    
     .link:hover,
     .link:focus {
         color: #404bbf;
@@ -376,7 +372,9 @@ body {
     }
     
     .contact {
-    
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
         padding-top: 24px;
         padding-bottom: 24px;
     
@@ -396,6 +394,7 @@ body {
     .section-one {
         background-color: #2e2f42;
         padding-top: 72px;
+        padding-bottom: 72px;
         display: block;
         margin: auto;
         background-image: linear-gradient(to bottom,
@@ -405,8 +404,6 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        max-width: 320px;
-        height: 432px;
     }
 
     .title {
@@ -457,8 +454,7 @@ body {
 
         .section-one {
             padding-top: 112px;
-            max-width: 768px;
-            height: 436px;
+            padding-bottom: 112px;
             background-image: linear-gradient(to bottom,
                         rgba(46, 47, 66, 0.7),
                         rgba(46, 47, 66, 0.7)),
@@ -491,8 +487,6 @@ body {
                         rgba(46, 47, 66, 0.7),
                         rgba(46, 47, 66, 0.7)),
                     url(../images/hover/people-office-desk.jpg);
-                max-width: 1440px;
-                height: 600px;
             }
         
             @media screen and (min-resolution: 192dpi) and (min-width: 1168px),
@@ -509,7 +503,11 @@ body {
     
     /* ============== / section 1 ============== */
 
-    /* ============== section 2 ============== */ 
+    /* ============== section 2 ============== */
+    
+    .icon {
+        display: none;
+    }
 
     .menu-two {
         display: flex;
@@ -559,9 +557,19 @@ body {
         .paragraph {
             width: 356px;
         }
+
+        .section-title {
+           display: flex;
+        }
     }
 
     @media screen and (min-width: 1158px) {
+
+        .section-two {
+                padding-top: 120px;
+                padding-bottom: 120px;
+        }
+
         .icon {
                 display: flex;
                 align-items: center;
@@ -614,13 +622,6 @@ body {
     }
 
     .section-foto {
-        display: flex;
-        width: 264px;
-        padding-bottom: 32px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
         border-radius: 0px 0px 4px 4px;
         background: #FFF;
         box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -746,25 +747,20 @@ body {
     }
 
     .portfolio-list-item {
-        display: flex;
-        width: 288px;
-        padding-bottom: 32px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-        border: 1px solid #F4F4FD;
         background: #FFF;
-        box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     }
 
     .portfolio-content {
         display: flex;
-        padding: 0px 16px;
+        padding: 32px 16px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 8px;
         align-self: stretch;
+        border-bottom: 1px solid #E7E9FC;
+        border-left: 1px solid #E7E9FC;
+        border-right: 1px solid #E7E9FC;
     }
 
     .portfolio-name {
@@ -801,13 +797,6 @@ body {
             transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .portfolio-content {
-            border-bottom: 1px solid #E7E9FC;
-            border-left: 1px solid #E7E9FC;
-            border-right: 1px solid #E7E9FC;
-            margin-top: 0px;
-            padding: 32px 16px;
-        }
     }
 
     @media screen and (min-width: 1158px) {
@@ -846,6 +835,7 @@ body {
         }
         
         .portfolio-list-item:hover {
+            border: 1px solid #f4f4fd;
             box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
         }
     }
@@ -860,6 +850,7 @@ body {
     }
 
     .logo-footer {
+        font-family: "Raleway", sans-serif;
         color: #4d5ae5;
         font-size: 18px;
         font-weight: 700;
@@ -874,9 +865,6 @@ body {
 
     .web-footer {
         color: #f4f4fd;
-        font-size: 18px;
-        line-height: 1.16;
-        letter-spacing: 0.03em;
     }
 
     .text-footer {
@@ -893,6 +881,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 72px;
     }
 
     .social-media-text {
@@ -924,7 +913,6 @@ body {
 
     .subscribe-text {
         color: #FFF;
-        font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -932,7 +920,6 @@ body {
         letter-spacing: 0.02em;
         display: flex;
         justify-content: center;
-        padding-top: 72px;
     }
 
     .form-footer {
@@ -978,33 +965,27 @@ body {
         line-height: 1.5;
         letter-spacing: 0.04em;
         border: 1px solid #4D5AE5;
-    }
-
-@media screen and (max-width: 767px) {
-    .footer-heading {
-        padding-top: 72px;
-        }
-     
-    .text-logo-footer {
-        padding-left: 16px;
-        padding-right: 16px;
-        }
-
-    .form-button-footer {
         gap: 16px;
     }
-        
-}
+
+    .text-logo-footer {
+        margin-bottom: 72px;
+        }
+
 
 @media screen and (min-width: 768px) {
+
     .logo-footer {
         display: inline-block;
-        margin-bottom: 16px;
         }
 
     .text-footer {
          max-width: 264px;
         }
+
+    .text-logo-footer {
+        margin-bottom: 0px;
+    }
 
     .social-links-link-footer {
         width: 100%;
@@ -1013,7 +994,7 @@ body {
 
     .footer-heading {
         display: block;
-        margin-right: auto;
+        margin-bottom: 0px;
         }
 
     .subscribe-text {
@@ -1063,13 +1044,18 @@ body {
     .footer {
         padding: 100px 0;
         }
+
+    .subscribe-text {
+        margin-top: 0;
+    }
         
     .text-logo-footer {
-        margin-right: 120px;
+        margin-right: auto;
         }
 
     .footer-heading {
         display: block;
+        margin-right: auto;
     }
 
     .social-links-link-footer:hover,
@@ -1356,7 +1342,7 @@ body {
     .container-footer {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 72px 24px;
         padding-left: 108px;
     }
 
